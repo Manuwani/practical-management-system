@@ -26,7 +26,6 @@ export const createPracticals = [
     }
 ];
 
-// Get all Practicals
 export const getPracticals = async (req, res) => {
     try {
         const practicals = await Practical.find();
@@ -36,7 +35,6 @@ export const getPracticals = async (req, res) => {
     }
 };
 
-// Enroll in a practical (Student only)
 export const practicalEnroll = [
     authMiddleware,
     validateRole(['Student']),
