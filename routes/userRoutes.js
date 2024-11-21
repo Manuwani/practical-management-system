@@ -4,8 +4,6 @@ import express from 'express';
 const router = express.Router();
 import { authMiddleware, validateRole } from '../middleware/authMiddleware.js'; 
 
-
-// Create a new user
 export const createuser=async (req, res) => {
     const { name, email, password, role } = req.body;
 
