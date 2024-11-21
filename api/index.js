@@ -6,6 +6,12 @@ import dotenv from 'dotenv';
 const app = express();
 app.use(express.json());
 dotenv.config()
+app.get("/", (req, res)=>{
+  res.json({
+    success: true,
+    message: "Server Running Successfully"
+  })
+})
 app.use("/api/v1",router)
 dbConnect()
 
