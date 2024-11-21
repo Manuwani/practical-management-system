@@ -38,7 +38,6 @@ export const getAdmins = [
         }
     }
 ];
-// Route for getting all students (Admins and Teachers can access this)
 export const getStudents = [
     authMiddleware,
     validateRole(['Admin', 'Teacher']),
@@ -52,7 +51,6 @@ export const getStudents = [
     }
 ];
 
-// Route for getting all teachers (Only Admins can access this)
 export const getTeachers = [
     authMiddleware,
     validateRole(['Admin']),
